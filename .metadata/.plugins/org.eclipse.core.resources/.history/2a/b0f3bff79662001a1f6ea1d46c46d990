@@ -1,0 +1,5 @@
+package com.goaltend.GoaltendAPI.src;
+
+public class ApplicationConfig {
+
+}
