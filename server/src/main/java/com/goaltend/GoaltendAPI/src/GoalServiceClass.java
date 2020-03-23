@@ -81,6 +81,16 @@ public class GoalServiceClass implements GoalService {
 			}
 		}
 	}
+	public void deleteReward(String id, String reward) 
+	{
+		Goal goal = this.findGoal(id);
+		goal.rewards.remove(reward);
+	}
+	public void deleteSacrifice(String id, String sacrifice) 
+	{
+		Goal goal = this.findGoal(id);
+		goal.sacrifices.remove(sacrifice);
+	}
 	
 
 	

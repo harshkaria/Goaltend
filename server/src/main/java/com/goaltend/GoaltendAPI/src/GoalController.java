@@ -58,6 +58,18 @@ public class GoalController {
 		goalService.addSacrifice(id, sacrifice);
 		return new ResponseEntity("Sacrifice added!", HttpStatus.OK);
 	}
+	@RequestMapping(value = "/delete/reward/{goalId}/", method=RequestMethod.DELETE)
+	public ResponseEntity<?> deleteSacrifice(@PathVariable("goalId") String id, @RequestBody String sacrifice)
+	{
+		goalService.deleteSacrifice(id, sacrifice);
+		return new ResponseEntity("Sacrifice Removed", HttpStatus.OK);
+	}
+	@RequestMapping(value = "/delete/sacrifice/{goalId}/", method=RequestMethod.DELETE)
+	public ResponseEntity<?> deleteReward(@PathVariable("goalId") String id, @RequestBody String reward)
+	{
+		goalService.deleteReward(id, reward);
+		return new ResponseEntity("Reward Removed", HttpStatus.OK);
+	}
 	
 	
 	

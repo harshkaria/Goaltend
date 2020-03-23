@@ -11,5 +11,7 @@ public interface GoalService {
 	void addReward(String id, String reward);
 	void editSacrifice(String id, String sacrifice, String newSacrifice);
 	void editReward(String id, String reward, String newReward);
+	void deleteReward(String id, String reward);
+	void deleteSacrifice(String id, String sacrifice);
 
 }
