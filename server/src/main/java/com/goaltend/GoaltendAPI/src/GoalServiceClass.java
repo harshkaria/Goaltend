@@ -68,6 +68,7 @@ public class GoalServiceClass implements GoalService {
 				re = newReward;
 			}
 		}
+		this.saveOrUpdateGoal(goal);
 	}
 	public void editSacrifice(String id, String oldSacrifice, String newSacrifice)
 	{
@@ -80,16 +81,19 @@ public class GoalServiceClass implements GoalService {
 				re = newSacrifice;
 			}
 		}
+		this.saveOrUpdateGoal(goal);
 	}
 	public void deleteReward(String id, String reward) 
 	{
 		Goal goal = this.findGoal(id);
 		goal.rewards.remove(reward);
+		this.saveOrUpdateGoal(goal);
 	}
 	public void deleteSacrifice(String id, String sacrifice) 
 	{
 		Goal goal = this.findGoal(id);
 		goal.sacrifices.remove(sacrifice);
+		this.saveOrUpdateGoal(goal);
 	}
 	
 
